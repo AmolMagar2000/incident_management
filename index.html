@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Bootstrap 5 CSS (for description box) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+</head>
+<body onload="loadAppValues()">
+    <div class="container form-container">
+        <h4 style="text-align: center;"><b>Incident Management</b></h4>
+        <div class="form-group">
+            <label for="type">Type:</label>
+            <select class="form-control" id="Type" required>
+                <option value="-- Select Type --">-- Select Type --</option>
+            </select>
+            <span class="text-danger " id="errtype"></span>
+        </div>
+        <div class="form-group">
+            <label for="application">Application:</label>
+            <select class="form-control" id="Application" required>
+                <option value="-- Select Application --">-- Select Application --</option>
+            </select>
+            <span class="text-danger " id="errApp"></span>
+        </div>
+        <div class="form-group">
+            <label for="Tier1">Tier1:</label>
+            <select class="form-control" id="Tier1">
+                <option value="-- Select Tier1 value --" required>-- Select Tier1 value --</option>
+            </select>
+            <span id="errT1" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Tier2">Tier2:</label>
+            <select class="form-control" id="Tier2">
+                <option value="-- Select Tier2 value --" required>-- Select Tier2 value --</option>
+            </select>
+            <span id="errT2" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Tier3">Tier3:</label>
+            <select class="form-control" id="Tier3">
+                <option value="-- Select Tier3 value --" required>-- Select Tier3 value --</option>
+            </select>
+            <span id="errT3" class="text-danger"></span>
+        </div>
+        <!-- Description Box -->
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" rows="4" required></textarea>
+            <span id="errDescription" class="text-danger"></span>
+        </div>
+        <div class="submitBtn">
+            <button class="btn btn-primary" onclick="SubmitFunct()">Submit</button>
+            <div id="successmsg" class="text-success"></div>
+        </div>
+    </div>
+</body>
+</html>
